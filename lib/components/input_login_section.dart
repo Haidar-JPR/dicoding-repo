@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'themes.dart';
 
-class InputLoginSection extends StatefulWidget {
+// ignore: must_be_immutable
+class InputLoginSection extends StatelessWidget {
   InputLoginSection({
     Key? key,
     required this.name,
@@ -19,11 +20,6 @@ class InputLoginSection extends StatefulWidget {
   TextEditingController controller;
 
   @override
-  State<InputLoginSection> createState() => _InputLoginSectionState();
-}
-
-class _InputLoginSectionState extends State<InputLoginSection> {
-  @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(top: 30),
@@ -31,7 +27,7 @@ class _InputLoginSectionState extends State<InputLoginSection> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            widget.name,
+            name,
             style: fontStyles.copyWith(
               fontSize: 16,
               fontWeight: FontWeight.bold,
@@ -39,7 +35,7 @@ class _InputLoginSectionState extends State<InputLoginSection> {
           ),
           const SizedBox(height: 8),
           TextField(
-            controller: widget.controller,
+            controller: controller,
             decoration: InputDecoration(
               border: OutlineInputBorder(
                 borderSide: BorderSide.none,
@@ -48,13 +44,13 @@ class _InputLoginSectionState extends State<InputLoginSection> {
               filled: true,
               fillColor: Colors.purple.shade100,
               prefixIcon: Icon(
-                widget.icon,
+                icon,
                 color: Colors.purple.shade400,
               ),
-              hintText: widget.hint,
+              hintText: hint,
               hintStyle: fontStyles.copyWith(fontSize: 14),
             ),
-            obscureText: widget.obsecure,
+            obscureText: obsecure,
           ),
         ],
       ),
