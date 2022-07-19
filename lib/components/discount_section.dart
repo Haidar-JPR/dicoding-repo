@@ -51,17 +51,17 @@ class DiscountSection extends StatelessWidget {
         Container(
           width: double.infinity,
           height: MediaQuery.of(context).size.height * 0.30,
-          padding: EdgeInsets.only(left: defaultMargin + 10),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(25),
           ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Image.network(
-                'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-13-blue-select-2021?wid=940&hei=1112&fmt=png-alpha&.v=1645572386470',
-              ),
-            ],
+          child: Padding(
+            padding: EdgeInsets.only(
+              left: MediaQuery.of(context).size.width * 0.50,
+            ),
+            child: Image.asset(
+              'assets/images/iphone1-4.png',
+              fit: BoxFit.contain,
+            ),
           ),
         ),
       ],

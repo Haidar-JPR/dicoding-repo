@@ -33,8 +33,8 @@ class HeaderSection extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (ctx) => ProfilePage()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (ctx) => const ProfilePage()));
             },
             child: const CircleAvatar(
               radius: 28,

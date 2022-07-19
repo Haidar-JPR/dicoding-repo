@@ -18,6 +18,7 @@ class MainPage extends StatelessWidget {
       body: ListView(
         children: [
           HeaderSection(name: name),
+          const SizedBox(height: 16),
           const DiscountSection(),
           const SizedBox(height: 6),
           const CategorySection(),
